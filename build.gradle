@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.5.1")
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    compile 'org.springframework.boot:spring-boot-devtools:2.5.1'
+    compile 'org.springframework.boot:spring-boot-starter-web:2.5.1'
+    compile 'org.springframework.boot:spring-boot-starter-actuator:2.5.1'
+    compile('com.google.code.gson:gson:2.8.5')
+}
+
+test {
+    useJUnitPlatform()
+}
